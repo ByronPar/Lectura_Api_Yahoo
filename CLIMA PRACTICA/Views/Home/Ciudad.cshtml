@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+    
+
+    <div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ciudad
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="2459115">
+                    Nueva York
+                </a>
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="44418">
+                    Londress
+                </a>
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="1062617">
+                    Singapur
+                </a>
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="83123">
+                    Guatemala, GT
+                </a>
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="2388929">
+                    Dallas, US
+                </a>
+            </div>
+        </div>
+
+
+
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Temperatura:
+            </dt>
+            <dd class="col-sm-10" id="1">
+                @ViewBag.temperatura  °C
+            </dd>
+            <dt class="col-sm-2">
+                Humedad:
+            </dt>
+            <dd class="col-sm-10" id="2">
+                @ViewBag.humedad  %
+            </dd>
+            <dt class="col-sm-2">
+                Presion:
+            </dt>
+            <dd class="col-sm-10" id="3">
+                @ViewBag.presion  millibars
+            </dd>
+            <dt class="col-sm-2">
+                Dirección del viento:
+            </dt>
+            <dd class="col-sm-10" id="4">
+                @ViewBag.direccion°   grados desde el norte
+            </dd>
+            <dt class="col-sm-2">
+                Velocidad del viento:
+            </dt>
+            <dd class="col-sm-10" id="5">
+                @ViewBag.velocidad km/h
+            </dd>
+        </dl>
+    </div>
