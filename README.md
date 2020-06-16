@@ -1,2 +1,2 @@
-# Practica1_IPC2
-lector de IP Yahoo
+# API Weather yahoo
+lector de API Yahoo
