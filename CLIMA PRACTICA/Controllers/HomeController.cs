@@ -14,9 +14,9 @@ namespace CLIMA_PRACTICA.Controllers
     {
 
 
+        
         [Route("{woeid}")]
         
-
         public IActionResult Ciudad(string woeid)
         {
             if (woeid != "algo")
@@ -41,35 +41,6 @@ namespace CLIMA_PRACTICA.Controllers
 
 
         }
-
-        [Route("{latitud}")]
-        [Route("{longitud}")]
-        public IActionResult Latitud( string latitud, string longitud)
-        {
-            //if (woeid != "algo")
-            //{
-            //    DataClima datos = new DataClima(woeid);
-            //    string DatosCompletos = datos.Datos();
-            //    ViewBag.temperatura = datos.Temperatura(DatosCompletos);
-            //    ViewBag.humedad = datos.Humedad(DatosCompletos);
-            //    ViewBag.presion = datos.Presion(DatosCompletos);
-            //    ViewBag.direccion = datos.DireccionVi(DatosCompletos);
-            //    ViewBag.velocidad = datos.VelocidadVi(DatosCompletos);
-            //    return View();
-            //}
-            //else
-            //{
-            //    ViewBag.temperatura = "";
-            //    ViewBag.humedad = "";
-            //    ViewBag.presion = "";
-            //    ViewBag.direccion = "";
-            //    ViewBag.velocidad = "";
-            //    return View();
-            //}
-            return View();
-
-        }
-
 
         private readonly ILogger<HomeController> _logger;
 
