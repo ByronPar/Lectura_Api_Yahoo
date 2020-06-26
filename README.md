@@ -14,9 +14,9 @@ Seguir pasos en la pagina descrita para crear una cuenta y automaticamente obten
 _Que cosas necesitas para ejecutar la API
 
 ```
-Una petición al servicio  (en este caso utilizamos una clase)
-Formato de  Salida JSON  ,XML , entre otros
-Lectura correcta de Datos dependiendo el formato de Salida - En este caso utilizamos JSON)
+- Una petición al servicio  (en este caso utilizamos una clase)
+- Formato de  Salida JSON  ,XML , entre otros
+- Lectura correcta de Datos dependiendo el formato de Salida - En este caso utilizamos JSON)
 ```
 Ejemplo de Salida Archivo JSON
 
