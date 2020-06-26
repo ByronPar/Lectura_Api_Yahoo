@@ -15,20 +15,14 @@ namespace CLIMA_PRACTICA.Controllers
 
 
         
-        [Route("{woeid}")]
+        
         
         public IActionResult Ciudad(string woeid)
         {
-            if (woeid != "algo")
+            if (!string.IsNullOrEmpty(woeid))
             {
                 DataClima datos = new DataClima(woeid);
-                string DatosCompletos = datos.Datos();
-                ViewBag.temperatura = datos.Temperatura(DatosCompletos);
-                ViewBag.humedad = datos.Humedad(DatosCompletos);
-                ViewBag.presion = datos.Presion(DatosCompletos);
-                ViewBag.direccion = datos.DireccionVi(DatosCompletos);
-                ViewBag.velocidad = datos.VelocidadVi(DatosCompletos);
-                return View();
+                return View(datos);
             }
             else {
                 ViewBag.temperatura = "";

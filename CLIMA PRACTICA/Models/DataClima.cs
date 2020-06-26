@@ -21,11 +21,17 @@ namespace CLIMA_PRACTICA.Models
         private string cWeatherID = "";
         private string cUnitID = "u=c";           // Metric units
         private string cFormat = "json";
+        public string temperatura = "";
+        public string humedad = "";
+        public string presion = "";
+        public string direccion = "";
+        public string velocidad = "";
 
 
         public DataClima(string woeid)
         {
             this.cWeatherID = "woeid=" + woeid;
+            this.Datos();
         }
 
         static string _get_timestamp()
@@ -89,7 +95,7 @@ namespace CLIMA_PRACTICA.Models
         }
 
 
-        public String Datos()
+        public void Datos()
         {
 
             string lURL = cURL + "?" + cWeatherID + "&" + cUnitID + "&format=" + cFormat;
@@ -100,42 +106,14 @@ namespace CLIMA_PRACTICA.Models
             Console.WriteLine("Downloading Yahoo weather report . . .");
             byte[] lDataBuffer = lClt.DownloadData(lURL);
             string lOut = Encoding.ASCII.GetString(lDataBuffer);
-            return lOut;
+            dynamic data = JsonConvert.DeserializeObject(lOut);
+            this.temperatura = data.current_observation.condition.temperature;
+            this.humedad = data.current_observation.atmosphere.humidity;
+            this.presion = data.currente_observation.atmosphere.pressure;
+            this.direccion = data.current_observation.wind.direction;
+            this.velocidad = data.current_observation.wind.speed;
         }
 
-        public String Temperatura(string lOut) {
-            dynamic data = JsonConvert.DeserializeObject(lOut);
-            string temp = data.current_observation.condition.temperature;
-            return temp;
-        }
-
-        public String Humedad(string lOut)
-        {
-            dynamic data = JsonConvert.DeserializeObject(lOut);
-            string humedad = data.current_observation.atmosphere.humidity;
-            return humedad;
-        }
-
-        public String Presion(string lOut)
-        {
-            dynamic data = JsonConvert.DeserializeObject(lOut);
-            string presion= data.current_observation.atmosphere.pressure;
-            return presion;
-        }
-
-        public String DireccionVi(string lOut)
-        {
-            dynamic data = JsonConvert.DeserializeObject(lOut);
-            string direccion = data.current_observation.wind.direction;
-            return direccion;
-        }
-
-        public String VelocidadVi(string lOut)
-        {
-            dynamic data = JsonConvert.DeserializeObject(lOut);
-            string velocidad = data.current_observation.wind.speed;
-            return velocidad;
-        }
 
     }
         
