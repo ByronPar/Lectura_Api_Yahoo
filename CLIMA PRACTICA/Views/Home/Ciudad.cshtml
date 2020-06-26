@@ -14,22 +14,21 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 
-                <a class="btn btn-primary ">
-                    @Html.ActionLink("Nueva York", "Ciudad", "Home", new { woeid = "2459115" })
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="2459115">
+                    Nueva York
                 </a>
-                <a class="btn btn-primary ">
-                    @Html.ActionLink("Londes", "Ciudad", "Home", new { woeid = "44418" })
+                
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="44418">
+                    Londress
                 </a>
-                <a class="btn btn-primary ">
-                    @Html.ActionLink("Singapur", "Ciudad", "Home", new { woeid = "1062617" })
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="1062617">
+                    Singapur
                 </a>
-                <a class="btn btn-primary ">
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="83123">
                     Guatemala, GT
-                    @Html.ActionLink("Guatemala, GT", "Ciudad", "Home", new { woeid = "83123" })
                 </a>
-                <a class="btn btn-primary ">
+                <a class="btn btn-primary " type="button" asp-area="" asp-controller="Home" asp-action="Ciudad" asp-route-woeid="2388929">
                     Dallas, US
-                    @Html.ActionLink("Dallas, US", "Ciudad", "Home", new { woeid = "2388929" })
                 </a>
             </div>
         </div>
@@ -41,31 +40,31 @@
             <dt class="col-sm-2">
                 Temperatura:
             </dt>
-            <dd class="col-sm-10">
+            <dd class="col-sm-10" id="1">
                 @Model.temperatura  °C
             </dd>
             <dt class="col-sm-2">
                 Humedad:
             </dt>
-            <dd class="col-sm-10">
+            <dd class="col-sm-10" id="2">
                 @Model.humedad  %
             </dd>
             <dt class="col-sm-2">
                 Presion:
             </dt>
-            <dd class="col-sm-10">
-                @Model.presion millibars
+            <dd class="col-sm-10" id="3">
+                @Model.presion  millibars
             </dd>
             <dt class="col-sm-2">
                 Dirección del viento:
             </dt>
-            <dd class="col-sm-10">
+            <dd class="col-sm-10" id="4">
                 @Model.direccion°   grados desde el norte
             </dd>
             <dt class="col-sm-2">
                 Velocidad del viento:
             </dt>
-            <dd class="col-sm-10">
+            <dd class="col-sm-10" id="5">
                 @Model.velocidad km/h
             </dd>
         </dl>

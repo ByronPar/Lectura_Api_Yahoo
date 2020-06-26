@@ -25,12 +25,24 @@ namespace CLIMA_PRACTICA.Controllers
                 return View(datos);
             }
             else {
-                ViewBag.temperatura = "";
-                ViewBag.humedad = "";
-                ViewBag.presion = "";
-                ViewBag.direccion = "";
-                ViewBag.velocidad = "";
-                return View();
+                DataClima datos = new DataClima();
+                return View(datos);
+            }
+
+
+        }
+
+        public IActionResult Latitud(string latitud,string longitud)
+        {
+            if (!string.IsNullOrEmpty(latitud) && !string.IsNullOrEmpty(longitud))
+            {
+                LatitudLon datos = new LatitudLon(latitud,longitud);
+                return View(datos);
+            }
+            else
+            {
+                LatitudLon datos = new LatitudLon();
+                return View(datos);
             }
 
 

@@ -163,4 +163,4 @@ C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACT
 C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACTICA\bin\Debug\netcoreapp3.1\RestSharp.dll
 C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACTICA\obj\Debug\netcoreapp3.1\CLIMA PRACTICA.csproj.CoreCompileInputs.cache
 C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACTICA\obj\Debug\netcoreapp3.1\CLIMA PRACTICA.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACTICA\obj\Debug\netcoreapp3.1\Razor\Views\Latitud\Latitud.cshtml.g.cs
+C:\Users\32379\OneDrive\Documentos\Visual Studio 2019\CLIMA PRACTICA\CLIMA PRACTICA\obj\Debug\netcoreapp3.1\Razor\Views\Home\Latitud.cshtml.g.cs

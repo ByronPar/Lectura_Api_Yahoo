@@ -34,6 +34,11 @@ namespace CLIMA_PRACTICA.Models
             this.Datos();
         }
 
+        public DataClima() { 
+            
+        }
+
+
         static string _get_timestamp()
         {
             TimeSpan lTS = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
@@ -109,7 +114,7 @@ namespace CLIMA_PRACTICA.Models
             dynamic data = JsonConvert.DeserializeObject(lOut);
             this.temperatura = data.current_observation.condition.temperature;
             this.humedad = data.current_observation.atmosphere.humidity;
-            this.presion = data.currente_observation.atmosphere.pressure;
+            this.presion = data.current_observation.atmosphere.pressure;
             this.direccion = data.current_observation.wind.direction;
             this.velocidad = data.current_observation.wind.speed;
         }

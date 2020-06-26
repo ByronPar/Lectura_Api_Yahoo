@@ -1,23 +1,29 @@
-﻿@{
+﻿@model CLIMA_PRACTICA.Models.LatitudLon
+@{
     ViewData["Title"] = "Privacy Policy";
-    @model CLIMA_PRACTICA.Models.LatitudLon
+    
 
 }
 
 
 <div>
-            @using (Html.BeginForm())
-            {
-        <div class="form-group">
-            <label for="exampleInputPassword1">Latitud</label>
-            @Html.TextBoxFor(lat => lat.lat)
+    <div class="row text-center justify-content-xl-center align-content-center">
+        <div class="col-md-4">
+            <form action="/Home/Latitud" method="post">
+                <div class="form-group">
+                    <label class="control-label">Ingresa Latitud</label>
+                    <input type="text" class="form-control" name="latitud" value="" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Ingresa Longitud</label>
+                    <input type="password" class="form-control" name="longitud" value="" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Mostrar Datos</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Longitud</label>
-            @Html.TextBoxFor(x => x.lon)
-        </div> 
-                <button type="submit" class="btn btn-secondary" onclick="">Obtener Datos</button>
-            }
+    </div>
 
     <hr />
     <dl class="row">
