@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label">Ingresa Longitud</label>
-                    <input type="password" class="form-control" name="longitud" value="" />
+                    <input type="text" class="form-control" name="longitud" value="" />
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary">Mostrar Datos</button>
@@ -27,6 +27,18 @@
 
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            Pais:
+        </dt>
+        <dd class="col-sm-10" id="1">
+            @Model.pais 
+        </dd>
+        <dt class="col-sm-2">
+            Ciudad:
+        </dt>
+        <dd class="col-sm-10" id="1">
+            @Model.ciudad  
+        </dd>
         <dt class="col-sm-2">
             Temperatura:
         </dt>

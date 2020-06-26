@@ -29,6 +29,8 @@ namespace CLIMA_PRACTICA.Models
         public string presion = "";
         public string direccion = "";
         public string velocidad = "";
+        public string ciudad = "";
+        public string pais = "";
 
 
         public LatitudLon(string lat, string lon)
@@ -123,6 +125,8 @@ namespace CLIMA_PRACTICA.Models
             this.presion = data.current_observation.atmosphere.pressure;
             this.direccion = data.current_observation.wind.direction;
             this.velocidad = data.current_observation.wind.speed;
+            this.ciudad = data.location.city;
+            this.pais = data.location.country;
         }
 
     }
