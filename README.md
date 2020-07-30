@@ -163,7 +163,7 @@ Se utiliza git como versionamiento de la aplicación en conjunto con su consola 
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_Todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Byron Josué Par Rancho** - *Proyecto Completo* - [SPM Poeta - Byron Par](https://github.com/ByronPar)
 * **Andrea Lopez Flores** - *Auxiliar de Laboratorio* - Resolución de dudas
